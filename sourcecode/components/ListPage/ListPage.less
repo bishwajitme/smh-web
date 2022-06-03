@@ -1,0 +1,46 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  padding-top: 40px;
+}
+
+.header {
+  .column(8);
+
+  h1 {
+    font-family: @font-heading;
+    color: @color-heading;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-size: 40px;
+    font-weight: @weight-hero-heading;
+    @media @mobile {
+      font-size: 30px;
+    }
+  }
+
+  .preamble {
+    font-size: 15px;
+    line-height: 24px;
+    color: @color-text;
+    margin-bottom: 40px;
+  }
+}
+
+.content {
+  .column(12);
+}
+
+@media @tabletAndDown {
+  .header {
+    .column(12);
+    h1 {
+      max-width: 100%;
+    }
+  }
+
+  .content {
+    .column(12);
+  }
+}

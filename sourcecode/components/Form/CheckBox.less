@@ -1,0 +1,86 @@
+@import '../../styles/common';
+
+.base {
+  position: relative;
+}
+
+.inputBoxWrapper {
+  margin: 0 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputBox {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.input {
+  display: none;
+  & + span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    vertical-align: middle;
+    background: #fff;
+    cursor: pointer;
+  }
+  &:checked + span {
+    border: 2px solid #fff;
+    background: @color-2;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 1.6em;
+  color: #fff;
+  margin-left: 5px;
+  cursor: pointer;
+  a {
+    color: #fff;
+  }
+}
+
+.valid {
+  &:after {
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 5px;
+    content: @icon-check;
+    font-family: @icon;
+    color: @color-3;
+  }
+}
+
+.invalid {
+  &:after {
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 100px;
+    padding: 5px;
+    content: @icon-cross;
+    font-family: @icon;
+    color: @color-error;
+  }
+}
+
+.validationMessage {
+  position: absolute;
+  margin: 0 1%;
+  display: inline-block;
+  top: -25px;
+  left: 0;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: @color-error;
+  color: #fff;
+  padding: 5px 10px;
+  z-index: 10;
+}

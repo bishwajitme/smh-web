@@ -1,0 +1,46 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.ImageCarousel {
+  .column(12);
+  padding-top: 20px;
+}
+
+.LinkRow {
+  .column(12);
+}
+
+.HeroBlock {
+  .column(12);
+}
+
+.LatestNewsList {
+  .column(8);
+
+  @media only screen and (max-width: 1024px) {
+    .column(12);
+  }
+}
+
+.BlockLinks {
+  .column(4);
+  padding-top: 68px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-top: 0;
+    .column(12);
+  }
+}
+
+.InterviewsRow {
+  .column(12);
+}
+
+.ArticleRow {
+  .column(12);
+}

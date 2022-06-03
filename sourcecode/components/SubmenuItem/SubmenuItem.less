@@ -1,0 +1,27 @@
+@import '../../styles/common';
+
+.link {
+  display: block;
+  background-color: @color-background-dark;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  color: @color-3;
+  font-size: 16px;
+  line-height: 1.4;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s, background-color 0.2s;
+
+  &:hover {
+    color: @color-2;
+  }
+}
+
+.linkActive {
+  color: @color-2;
+
+  &:hover {
+    color: @color-2;
+  }
+}

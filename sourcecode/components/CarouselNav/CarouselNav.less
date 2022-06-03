@@ -1,0 +1,48 @@
+@import '../../styles/common';
+
+.base {
+  font-size: 32px;
+  text-align: center;
+
+  a {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    text-decoration: none;
+    color: rgba(255,255,255,0.3);
+    transition: all 0.15s ease-in;
+
+    &:hover {
+      background: rgba(0,0,0,0.2);
+      color: rgba(255,255,255,0.8);
+    }
+  }
+
+  .next {
+    right: 0;
+    .iconRight {
+      .icon-triangle-right;
+    }
+  }
+
+  .prev {
+    left: 0;
+    .iconLeft {
+      .icon-triangle-left;
+    }
+  }
+
+  a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 746px) {
+  .base {
+    display: none;
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../styles/common';
+
+.base {
+  .clearfix();
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-right: 21px;
+  border-radius: 2px;
+  background: #ffffff;
+  line-height: 50px;
+
+  .icon {
+    .icon-triangle-down;
+    &:after {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 0;
+      margin-right: 16px;
+      color: #585858;
+    }
+  }
+}
+
+.select {
+  height: 50px;
+  padding: 0 48px 0 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-family: @font-heading;
+  font-size: 15px;
+  color: #585858;
+  cursor: pointer;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 682px) {
+  .base {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+  .select {
+    width: 100%;
+  }
+}

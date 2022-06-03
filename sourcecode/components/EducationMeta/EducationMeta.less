@@ -1,0 +1,44 @@
+@import '../../styles/common';
+
+.base {
+  .clearfix;
+}
+
+.listItem {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  margin: 8px 0 8px;
+  padding-right: 10px;
+  box-sizing: border-box;
+
+  &.list {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: bold;
+  color: @color-education-meta-title;
+}
+
+.info {
+  font-size: 12px;
+  line-height: 1.6;
+  color: @color-text;
+}
+
+@media screen and (max-width: 768px) {
+
+  .page {
+    .title {
+      font-size: 16px;
+    }
+
+    .info {
+      font-size: 16px;
+    }
+  }
+}

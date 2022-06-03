@@ -1,0 +1,158 @@
+@import '../../styles/common';
+
+.base {
+  position: relative;
+  background-color: @color-background;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  width: 33%;
+  height: auto;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content {
+  position: relative;
+  width: 66%;
+  margin-left: auto;
+  height: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  //&:after {
+  //  content: '';
+  //  position: absolute;
+  //  bottom: 0;
+  //  left: -60px;
+  //  right: -60px;
+  //  top: -60px;
+  //  box-shadow: inset 0px -60px 40px @bg-gray;
+  //}
+
+  //[data-context='latestNewsList'] & {
+  //  @media @tabletAndDown {
+  //    height: 500px;
+  //    padding-top: 250px;
+  //    width: 66%;
+  //  }
+  //
+  //  @media @mobile {
+  //    width: 100%;
+  //  }
+  //}
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.date {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: @weight-date;
+  color: white;
+  background-color: @color-date-background;
+  padding: 8px 10px;
+  margin: 5px 12px 5px 0;
+}
+
+.heading {
+  font-family: @font-heading;
+  font-weight: @weight-card-heading;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 0 5px 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.headingLink {
+  color: @color-card-heading;
+  &:hover {
+    color: @color-card-heading-hover;
+  }
+}
+
+.excerpt {
+  font-size: 14px;
+  line-height: 1.6em;
+  color: @color-text;
+  margin-bottom: 20px;
+}
+
+.faded {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 25px;
+  background: @color-background;
+  box-shadow: -10px -10px 20px 6px @color-background;
+}
+
+.link {
+  font-size: 14px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: @color-card-heading;
+  &:hover {
+    color: @color-card-heading-hover;
+  }
+}
+
+[data-context='listPageList'],
+[data-context='latestNewsList'],
+[data-context='articleListPage'] {
+  @media only screen and (max-width: 600px) {
+    .content {
+      height: 500px;
+      padding-top: 250px;
+      width: 100%;
+    }
+
+    .image {
+      width: 100%;
+      height: 240px;
+      bottom: auto;
+    }
+  }
+}
+
+[data-context='listPageList'],
+[data-context='educationArticleRow'],
+[data-context='interviewsRow'] {
+  .content {
+    height: 500px;
+    padding-top: 250px;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 240px;
+    bottom: auto;
+  }
+}
+
+[data-context='articleSidebar'] {
+  .content {
+    height: 500px;
+    padding-top: 250px;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 240px;
+    bottom: auto;
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  padding-top: 40px;
+  margin: 0 auto !important;
+  display: block!important;
+}
+
+.header {
+  .column(11);
+  .push(1);
+
+  h1 {
+    font-family: @font-heading;
+    color: @color-heading;
+    margin-bottom: 13px;
+    line-height: 1.4;
+    font-size: 40px;
+    font-weight: 700;
+    max-width: 50%;
+    @media @mobile {
+      font-size: 30px;
+    }
+  }
+}
+
+.content {
+  .column(10);
+  .push(1);
+
+  iframe {
+    width: 100%;
+  }
+}
+
+@media @tabletAndDown {
+  .header {
+    .column(12);
+    h1 {
+      max-width: 100%;
+    }
+  }
+
+  .content {
+    .column(12);
+  }
+}

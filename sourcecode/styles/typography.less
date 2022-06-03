@@ -1,0 +1,144 @@
+.typography-mixin() {
+
+  h1, h2, h3 {
+    font-family: @font-heading;
+    color: @color-heading;
+    font-weight: @weight-content-heading;
+    margin-bottom: 13px;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: @weight-content-heading;
+    @media @mobile {
+      font-size: 30px;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: @weight-content-heading;
+    @media @mobile {
+      font-size: 24px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    @media @mobile {
+      font-size: 20px;
+    }
+  }
+
+  * + h1,
+  * + h2,
+  * + h3 {
+    margin-top: 1.5em;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6em;
+    color: @color-text;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: @link-color;
+    &:hover {
+      color: @link-color-hover;
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  blockquote {
+    font-family: @font-heading;
+    margin: 20px 0;
+    p {
+      font-size: 30px;
+      color: @color-2;
+      padding-left: 40px;
+      border-left: 6px solid @color-2;
+    }
+
+    @media @mobile {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  ul, ol {
+    font-size: 15px;
+    line-height: 1.6em;
+    color: @color-text;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 27px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 7px;
+      height: 10px;
+      width: 10px;
+      background-color: @color-2;
+      border-radius: 10px;
+    }
+  }
+
+  ol {
+    counter-reset: item;
+
+    li {
+      position: relative;
+      padding-left: 27px;
+
+      &:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+        font-weight: 700;
+        color: @color-2;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+    }
+  }
+
+  img {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto !important; //override <img height="xxx">
+    margin: 0 20px 10px;
+
+    &[class~="alignright"] {
+      float: right;
+      margin-right: 0px;
+    }
+
+    &[class~="alignleft"] {
+      float: left;
+      margin-left: 0px;
+    }
+
+    &[class~="aligncenter"] {
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    &[class~="alignnone"] {
+      max-width: 100%;
+      margin: 0 0 10px;
+    }
+  }
+
+  * + img {
+    margin-top: 10px;
+  }
+}

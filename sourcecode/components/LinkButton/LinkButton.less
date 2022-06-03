@@ -1,0 +1,54 @@
+@import '../../styles/common';
+
+.button {
+  font-family: @font-heading;
+  text-align: center;
+  display: inline-block;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1em;
+  white-space: nowrap;
+  transition: background-color 0.4s;
+  min-width: 200px;
+  &:after {
+    font-family: @icon;
+    margin-left: 5px;
+  }
+
+  &.document {
+    background-color: @link-button-document;
+    &:hover {
+      background-color: @link-button-document-hover;
+    }
+    &:after {
+      content: @icon-download;
+    }
+  }
+
+  &.external {
+    background-color: @link-button-external;
+    &:hover {
+      background-color: @link-button-external-hover;
+    }
+    &:after {
+      content: @icon-outbound;
+    }
+  }
+
+  &.internal {
+    background-color: @link-button-internal;
+    &:hover {
+      background-color: @link-button-internal-hover;
+    }
+  }
+
+  &.anchor {
+    background-color: @link-button-internal;
+    &:hover {
+      background-color: @link-button-internal-hover;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  padding-top: 20px;
+  display: block !important;
+  margin: 0 auto !important;
+    overflow: hidden;
+
+}
+
+.header {
+  .column(8);
+  &.isFullWidth {
+    .column(12);
+  }
+
+  display: inline-flex;
+  flex-direction: column;
+
+
+  h1 {
+    font-family: @font-heading;
+    color: @color-heading;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-size: 40px;
+    font-weight: @weight-hero-heading;
+    @media @mobile {
+      font-size: 30px;
+    }
+  }
+}
+
+.content {
+  .column(8);
+}
+
+.aside {
+  .column(3);
+  .push(1);
+  float: right;
+}
+
+.hidden {
+  width: 100%;
+  text-align: center;
+  padding: 80px 20px;
+  color: @color-text;
+  font-size: 14px;
+}
+
+@media @tabletAndDown {
+  .base {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  .header {
+    order: 0;
+    .column(12);
+    &.isFullWidth {
+      .column(12);
+      display: inline-flex;
+      flex-direction: column-reverse;
+    }
+    display: inline-flex;
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    order: 2;
+    .column(12);
+  }
+
+  .aside {
+    order: 1;
+    .column(12);
+    margin-bottom: 40px;
+  }
+}

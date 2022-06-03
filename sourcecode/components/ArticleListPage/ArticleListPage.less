@@ -1,0 +1,40 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  margin: 0 auto !important;
+  display: block!important;
+}
+.header {
+  .column(12);
+  padding-top: 20px;
+}
+
+.list {
+  .column(8);
+}
+
+.aside {
+  .column(4);
+}
+
+.heading {
+  float: left;
+  font-family: @font-heading;
+  font-size: 30px;
+  line-height: 1.6em;
+  font-weight: @weight-hero-heading;
+  color: @color-heading;
+  margin-bottom: 20px;
+}
+
+.aside {
+  .column(4);
+}
+
+@media only screen and (max-width: 1024px) {
+  .aside,
+  .list {
+    .column(12);
+  }
+}

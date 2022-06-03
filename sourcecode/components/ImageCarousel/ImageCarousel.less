@@ -1,0 +1,144 @@
+@import '../../styles/common';
+
+.base {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.swipeReact, .singleImage {
+
+  div {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 400px;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .videoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: auto;
+    z-index: 1;
+  }
+
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  h2 {
+    position: absolute;
+    right: 100px;
+    bottom: 90px;
+    font-family: @font-heading;
+    font-size: 45px;
+    line-height: 1.4;
+    font-weight: @weight-hero-heading;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+
+}
+
+@media only screen and (max-width: 860px) {
+  .swipeReact, .singleImage {
+    div {
+      height: 300px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .swipeReact, .singleImage {
+
+    > div {
+      text-align: center;
+      height: auto;
+    }
+
+    > div > div {
+      height: auto;
+    }
+
+    .link {
+      display: block;
+      position: relative;
+
+      div {
+        height: 200px;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      position: absolute;
+      color: @color-heading;
+      left: 0;
+      right: 0;
+      top: 110%;
+      text-shadow: none;
+    }
+  }
+
+  .swipeReact {
+    > div > div {
+      text-align: center;
+      height: 200px;
+
+      &.itemsHasText {
+        height: 400px;
+      }
+    }
+  }
+
+  .singleImage {
+    > div {
+      text-align: center;
+      height: 200px;
+
+      &.itemsHasText {
+        height: 400px;
+      }
+    }
+
+    .link div {
+      position: relative;
+    }
+  }
+}
+
+/*
+.base {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 100%;
+}
+
+.heading {
+  position: absolute;
+  right: 100px;
+  bottom: 70px;
+  font-family: @adelle;
+  font-size: 45px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: white;
+}
+*/

@@ -1,0 +1,39 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+}
+
+.listItem {
+  .column(4);
+  margin-bottom: 20px;
+}
+
+.listItemImage {
+  .column(4);
+  margin-bottom: 20px;
+}
+
+.listItem {
+  [data-context='educationArticleRow'] &,
+  [data-context='interviewsRow'] & {
+    @media only screen and (max-width: 768px) {
+      .column(6);
+      margin-bottom: 20px;
+    }
+
+    @media @mobile {
+      .column(12);
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.listItemImage {
+  [data-context='educationArticleRow'] &,
+  [data-context='interviewsRow'] & {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}

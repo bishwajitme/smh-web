@@ -1,0 +1,53 @@
+@import '../../styles/common';
+
+.base {
+  float: left;
+  max-width: 300px;
+
+  &:last-child a {
+    padding-right: 0;
+  }
+}
+
+.link {
+  display: block;
+  font-size: @main-menu-font-size;
+  font-family: @font-heading;
+  text-decoration: none;
+  color: #fff;
+  padding: 14px 15px 12px;
+  text-transform: @main-menu-text-transform;
+  transition: color 0.2s;
+
+  &:hover,
+  &:active,
+  &.linkActive {
+    color: @color-menu-hover;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .base {
+    float: none;
+    margin: 0 auto;
+    max-width: none;
+
+    &:last-child a {
+      padding-right: 15px;
+    }
+  }
+
+  .link {
+    display: block;
+    color: #ffffff;
+    font-size: 21px;
+  }
+}
+
+//Fix menu - landscape mode
+@media screen and (max-height: 450px) and (max-width: 960px) {
+  .link {
+    font-size: 18px;
+    padding: 8px 15px 8px;
+  }
+}

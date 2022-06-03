@@ -1,0 +1,70 @@
+@import '../../styles/common';
+
+.base {
+  list-style-type: none;
+}
+
+.link {
+  width: 100%;
+  padding: 30px;
+  background-color: @color-background;
+  margin-bottom: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: @font-heading;
+
+  a {
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    line-height: 1.4;
+
+    &:after {
+      margin-left: 5px;
+    }
+  }
+
+  @media @tabletAndDown {
+    a {
+      width: 80%;
+    }
+  }
+}
+.link--internal_link {
+  .link;
+  a {
+    background-color: @color-3;
+    &:hover {background-color: @color-3-hover
+    }
+  }
+}
+
+.link--external_link {
+  .link;
+  a {
+    background-color: @color-1;
+    &:hover {background-color: @color-1-hover
+    }
+  }
+  .icon {
+    margin-left: 3px;
+    .icon-outbound;
+  }
+}
+
+.link--document_link {
+  .link;
+  a {
+    background-color: @color-2;
+    &:hover {background-color: @color-2-hover
+    }
+  }
+  .icon {
+    margin-left: 3px;
+    .icon-download;
+  }
+}

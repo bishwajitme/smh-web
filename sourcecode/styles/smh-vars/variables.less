@@ -1,0 +1,141 @@
+@font-sans: 'roboto-condensed', sans-serif;
+@font-serif: 'merriweather', serif;
+@font-heading: 'roboto-condensed', sans-serif;
+@icon: 'icomoon';
+
+//@color-1: #660066;
+//@color-1-hover: darken(#660066, 10%);
+//@color-2: #025056;
+//@color-2-hover: darken(#025056, 10%);
+//@color-3: #58bca4;
+//@color-3-hover: #45a08a;
+
+@color-1: #660066;
+@color-1-hover: darken(#660066, 10%);
+@color-1-light: #aa5cd0;
+@color-1-light-hover: #8f3fb6;
+@color-2: #58bca4;
+@color-2-hover: #45a08a;
+@color-2-dark: #025056;
+@color-2-dark-hover: lighten(#025056, 10%);
+@color-3: #232323;
+@color-3-hover: lighten(#232323, 10%);
+
+//@color-1a: #702c91;
+//@color-1a-hover: #531a6e;
+//@color-1-light: #aa5cd0;
+//@color-1-light-hover: #8f3fb6;
+//@color-2a: #ec008c;
+//@color-2a-hover: #bc0070;
+//@color-3a: #00aeef;
+//@color-3a-hover: #008bbf;
+
+@color-white: #ffffff;                        // Only refer to this variable in this file!!
+@color-black: #232323;                        // Only refer to this variable in this file!!
+@color-black-hover: lighten(#232323, 10%);    // Only refer to this variable in this file!!
+
+@color-menu: @color-black;
+@color-menu-hover: @color-2;
+@color-mobile-menu: @color-3;
+@color-mobile-menu-hover: @color-3-hover;
+
+@color-heading: @color-black;
+
+@color-search-button: @color-2;
+@color-search-button-hover: @color-2-hover;
+@color-search-background: @color-menu;
+
+@link-color: @color-2;
+@link-color-hover: @color-2-hover;
+
+@link-button-document: @color-3;
+@link-button-document-hover: @color-3-hover;
+@link-button-external: @color-1;
+@link-button-external-hover: @color-1-hover;
+@link-button-internal: @color-2;
+@link-button-internal-hover: @color-2-hover;
+
+@select-active-color: @color-2;
+@select-active-color-hover: @color-2-hover;
+
+@color-card-heading: @color-black;
+@color-card-heading-hover: @color-black-hover;
+
+@color-submenu: @color-3;
+@color-submenu-hover: @color-2;
+
+@color-form-submit: #ffffff;
+@color-form-submit-hover: #ffffff;
+@color-form-submit-background: @color-2;
+@color-form-submit-background-hover: @color-2-hover;
+@color-form-background: @color-2-dark;
+@color-form-succuss-link: @color-2;
+
+@color-footer-background: #76787a;
+
+@color-input-placeholder: #c1c1c1;
+@color-text: #616161;
+
+@color-background: #f4f4f4;
+@color-background-dark: #e7e7e7;
+@color-detail: #e1e1e1;
+
+@color-error: #FF5555;
+@input-line-height: 54px;
+
+// COMPONENT SPECIFIC STYLES
+
+@main-menu-font-size: 16px;
+@main-menu-text-transform: none;
+
+@color-link-row-default: @color-black;
+@color-link-row-default-hover: @color-black-hover;
+
+@color-hero-background-black: @color-black;
+@color-hero-heading: @color-black;
+@color-hero-isBlack: @color-white;
+@weight-hero-heading: 400;
+@text-transform-hero-heading: uppercase;
+@color-hero-text: @color-black;
+
+@weight-list-heading: 400;
+@weight-content-heading: 700;
+
+@weight-card-heading: 700;
+
+@color-date-background: @color-2-dark;
+@weight-date: 700;
+@weight-education-card-heading: 700;
+@color-education-meta-title: @color-2-dark;
+
+@color-block-link-internal: @color-1;
+@color-block-link-internal-hover: @color-1-hover;
+@color-block-link-external: @color-2;
+@color-block-link-external-hover: @color-2-hover;
+
+@color-cookie-button: @color-2;
+@color-cookie-button-hover: @color-2-hover;
+
+// Grid
+@site-width: 1160px;
+
+@column-width: 80;
+@gutter-width: 20;
+@columns: 12;
+
+// Responsive
+@mobile-max-width: 480px;
+@tablet-max-width: 768px;
+@tablet-min-width: (@mobile-max-width + 1);
+@desktop-max-width: 1180px;
+@desktop-min-width: (@tablet-max-width + 1);
+@desktop-large-min-width: (@desktop-max-width + 1);
+
+@mobile: ~"only screen and (max-width: @{mobile-max-width})";
+@tabletAndDown: ~"only screen and (max-width: @{tablet-max-width})";
+@tablet: ~"only screen and (min-width: @{tablet-min-width}) and (max-width: @{tablet-max-width})";
+@tabletAndUp: ~"only screen and (min-width: @{tablet-min-width})";
+@desktopAndDown: ~"only screen and (max-width: @{desktop-max-width})";
+@desktop: ~"only screen and (min-width: @{desktop-min-width}) and (max-width: @{desktop-max-width})";
+@desktopAndUp: ~"only screen and (min-width: @{desktop-min-width})";
+@desktop-large: ~"only screen and (min-width: @{desktop-large-min-width})";

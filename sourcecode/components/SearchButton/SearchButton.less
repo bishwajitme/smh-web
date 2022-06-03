@@ -1,0 +1,26 @@
+@import '../../styles/common';
+
+.base {
+  float: right;
+  font-family: @font-heading;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 40px;
+  line-height: @input-line-height;
+  height: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  white-space: nowrap;
+  background-color: @color-search-button;
+  border-radius: 2px;
+  transition: background-color 0.4s;
+}
+
+@media screen and (max-width: 682px) {
+  .base {
+    float: none;
+    display: block;
+  }
+}

@@ -1,0 +1,123 @@
+@font-sans: Helvetica, Arial, sans-serif;
+@font-serif: Helvetica, Arial, sans-serif;
+@font-heading: 'adelle-sans', sans-serif;
+@icon: 'icomoon';
+
+@color-1: #3a768f;
+@color-1-hover: #1c4e63;
+@color-1-light: #65b5da;
+@color-1-light-hover: #3796c2;
+@color-2: #ed9c2d;
+@color-2-hover: #C47A14;
+@color-3: #00acab;
+@color-3-hover: #008180;
+
+@color-white: #ffffff;                        // Only refer to this variable in this file!!
+@color-black: #000000;                        // Only refer to this variable in this file!!
+@color-black-hover: lighten(#232323, 10%);    // Only refer to this variable in this file!!
+
+@color-menu: @color-black;
+@color-menu-hover: @color-1-light;
+@color-mobile-menu: @color-1;
+@color-mobile-menu-hover: @color-1-hover;
+
+@color-heading: @color-1;
+
+@color-search-button: @color-1-light;
+@color-search-button-hover: @color-1-light-hover;
+@color-search-background: @color-1;
+
+@link-color: @color-1;
+@link-color-hover: @color-1-hover;
+
+@link-button-document: @color-2;
+@link-button-document-hover: @color-2-hover;
+@link-button-external: @color-1;
+@link-button-external-hover: @color-1-hover;
+@link-button-internal: @color-3;
+@link-button-internal-hover: @color-3-hover;
+
+@select-active-color: @color-3;
+@select-active-color-hover: @color-3-hover;
+
+@color-card-heading: @color-1;
+@color-card-heading-hover: @color-1-hover;
+
+@color-submenu: @color-1;
+@color-submenu-hover: @color-2;
+
+@color-form-submit: #ffffff;
+@color-form-submit-hover: @color-3;
+@color-form-submit-background: @color-3-hover;
+@color-form-submit-background-hover: #ffffff;
+@color-form-background: @color-3;
+@color-form-succuss-link: @color-2;
+
+@color-footer-background: @color-1;
+
+@color-input-placeholder: #c1c1c1;
+@color-text: #616161;
+
+@color-background: #f4f4f4;
+@color-background-dark: #e7e7e7;
+@color-detail: #e1e1e1;
+
+@color-error: #FF5555;
+@input-line-height: 50px;
+
+// COMPONENT SPECIFIC STYLES
+
+@main-menu-font-size: 13px;
+@main-menu-text-transform: uppercase;
+
+@color-link-row-default: @color-black;
+@color-link-row-default-hover: @color-black-hover;
+
+@color-hero-background-black: @color-black;
+@color-hero-heading: @color-1;
+@color-hero-isBlack: @color-white;
+@weight-hero-heading: 700;
+@text-transform-hero-heading: none;
+@color-hero-text: @color-text;
+
+@weight-list-heading: 700;
+@weight-content-heading: 700;
+
+@weight-card-heading: 400;
+
+@color-date-background: @color-2;
+@weight-date: 400;
+@weight-education-card-heading: 400;
+@color-education-meta-title: @color-2;
+
+@color-block-link-internal: @color-3;
+@color-block-link-internal-hover: @color-3-hover;
+@color-block-link-external: @color-1;
+@color-block-link-external-hover: @color-1-hover;
+
+@color-cookie-button: @color-2;
+@color-cookie-button-hover: @color-2-hover;
+
+// Grid
+@site-width: 1160px;
+
+@column-width: 80;
+@gutter-width: 20;
+@columns: 12;
+
+// Responsive
+@mobile-max-width: 480px;
+@tablet-max-width: 768px;
+@tablet-min-width: (@mobile-max-width + 1);
+@desktop-max-width: 1180px;
+@desktop-min-width: (@tablet-max-width + 1);
+@desktop-large-min-width: (@desktop-max-width + 1);
+
+@mobile: ~"only screen and (max-width: @{mobile-max-width})";
+@tabletAndDown: ~"only screen and (max-width: @{tablet-max-width})";
+@tablet: ~"only screen and (min-width: @{tablet-min-width}) and (max-width: @{tablet-max-width})";
+@tabletAndUp: ~"only screen and (min-width: @{tablet-min-width})";
+@desktopAndDown: ~"only screen and (max-width: @{desktop-max-width})";
+@desktop: ~"only screen and (min-width: @{desktop-min-width}) and (max-width: @{desktop-max-width})";
+@desktopAndUp: ~"only screen and (min-width: @{desktop-min-width})";
+@desktop-large: ~"only screen and (min-width: @{desktop-large-min-width})";

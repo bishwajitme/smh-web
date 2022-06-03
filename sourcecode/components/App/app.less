@@ -1,0 +1,30 @@
+@import '../../styles/reset.less';
+@import '../../styles/oldie.less';
+@import '../../styles/common';
+
+.base {
+  font-family: @font-sans;
+}
+
+.page {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  box-sizing: border-box;
+
+  &.bannerVisible {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+      padding: 0px;
+    &.bannerVisible {
+      padding-top: 170px;
+    }
+  }
+}

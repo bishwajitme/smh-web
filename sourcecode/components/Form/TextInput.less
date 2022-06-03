@@ -1,0 +1,94 @@
+@import '../../styles/common';
+
+.base {
+  position: relative;
+}
+
+.input {
+  font-family: @font-heading;
+  font-size: 14px;
+  line-height: 1.4em;
+  padding: 9px 20px 9px 10px;
+  background: white;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  color: @color-text;
+
+  &:focus {
+    box-shadow: 0 0 0 2px @color-3-hover;
+  }
+}
+
+.placeholder {
+  display: none;
+}
+
+[id="ie9"] {
+  .placeholder {
+    display: block;
+    color: white;
+    font-size: 14px;
+    padding: 3px;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: @color-input-placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: @color-input-placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: @color-input-placeholder;
+}
+
+::-ms-clear {  display: none; width : 0; height: 0; }
+::-ms-reveal {  display: none; width : 0; height: 0; }
+
+:-ms-input-placeholder {
+  color: @color-input-placeholder;
+}
+
+.valid {
+  &:after {
+    position: absolute;
+    content: @icon-check;
+    font-family: @icon;
+    color: @color-3;
+    right: 10px;
+    bottom: 22px;
+  }
+}
+
+.invalid {
+  &:after {
+    position: absolute;
+    content: @icon-cross;
+    font-family: @icon;
+    color: @color-error;
+    right: 10px;
+    bottom: 22px;
+  }
+}
+
+.validationMessage {
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  left: 8px;
+  font-size: 11px;
+  line-height: 15px;
+  background-color: @color-error;
+  color: white;
+  padding: 5px 10px;
+  z-index: 10;
+}

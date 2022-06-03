@@ -1,0 +1,52 @@
+@import '../../styles/common';
+
+.base {
+  background-color: white;
+
+  &:hover {
+    background: darken(@color-background-dark, 5%);
+  }
+
+  &.selected {
+    background: @color-background-dark;
+    &:hover {
+      background: darken(@color-background-dark, 5%);
+    }
+  }
+}
+
+.input {
+  display: none;
+
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: @color-2;
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.label {
+  display: block;
+  position: relative;
+  padding: 12px 12px 12px 40px;
+  color: @color-text;
+  font-family: @font-heading;
+  font-size: 14px;
+  line-height: 1.4em;
+  min-height: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid @color-text;
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  margin: 0 auto !important;
+  display: block!important;
+}
+
+.lists {
+  .column(12);
+  padding-top: 20px;
+}
+
+.heading {
+  .column(12);
+
+  h1 {
+    font-family: @font-heading;
+    color: @color-heading;
+    margin-bottom: 13px;
+    line-height: 1.4;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 50px 0;
+    @media @mobile {
+      font-size: 30px;
+    }
+  }
+}

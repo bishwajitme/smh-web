@@ -1,0 +1,63 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  margin: 0 auto !important;
+  display: block!important;
+}
+
+.heroBlock {
+  .column(12);
+}
+
+.content {
+  .column(6);
+  .push(1);
+}
+
+.sidebar {
+  .column(3);
+  .push(1);
+}
+
+.articleRow {
+  .column(12);
+}
+
+.document {
+  .column(12);
+}
+
+.tabs {
+  .column(12);
+}
+
+.signup {
+  .column(12);
+  padding-top: 100px;
+}
+
+.meta {
+  padding-left: 50px;
+  box-sizing: border-box;
+  border-left: 8px solid @color-2;
+  margin-bottom: 20px;
+
+  li {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    .column(10);
+    .push(1);
+  }
+
+  .sidebar {
+    margin-bottom: 60px;
+    .column(10);
+    .push(1);
+  }
+}

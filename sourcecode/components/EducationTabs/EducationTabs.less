@@ -1,0 +1,105 @@
+@import '../../styles/common';
+
+.base {
+  margin-bottom: 60px;
+}
+
+.list {
+}
+
+.example-enter {
+  opacity: 0.01;
+  background: orange;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 0.3s;
+}
+
+.listItem {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1.6;
+  color: @color-text;
+  padding: 30px;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: @color-heading;
+  }
+
+  &.active {
+    color: @color-heading;
+    background-color: @color-background;
+  }
+}
+
+.currentTab {
+  background-color: @color-background;
+  padding: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.transitionGroup {
+
+  &[class*='example-enter'] {
+    opacity: 0.01;
+
+    &[class*='example-enter-active'] {
+      opacity: 1;
+      transition: opacity 0.7s;
+    }
+  }
+
+  &[class*='example-leave'] {
+    display: none;
+  }
+
+  &[class*='example-appear'] {
+    opacity: 1;
+
+    &[class*='example-appear-active'] {
+      opacity: 0.01;
+      transition: opacity 300ms;
+    }
+  }
+}
+
+.content {
+  max-width: 600px;
+
+  .typography-mixin;
+  //Overrides typography
+  h1 {
+    font-size: 24px;
+    @media @mobile {
+      font-size: 24px;
+    }
+  }
+  h2 {
+    font-size: 20px;
+    @media @mobile {
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 15px;
+    @media @mobile {
+      font-size: 15px;
+    }
+  }
+}
+
+@media @tabletAndDown {
+  .listItem {
+    display: block;
+  }
+}

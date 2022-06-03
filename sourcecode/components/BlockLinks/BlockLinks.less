@@ -1,0 +1,171 @@
+@import '../../styles/common';
+
+.base {
+  .row;
+  margin-bottom: 40px;
+}
+
+.block {
+  .column(12);
+}
+
+.link {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  position: relative;
+  height: 385px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  z-index: 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.internal {
+    &:before {
+    //  background-color: fade(@color-block-link-internal, 90%);  
+      transition: background-color 0.2s;
+    }
+
+    &:hover {
+      &:before {
+      //  background-color: fade(@color-block-link-internal-hover, 90%);
+      }
+    }
+  }
+
+  &.external {
+    &:before {
+      background-color: fade(@color-block-link-external, 90%);
+      transition: background-color 0.2s;
+    }
+
+    &:hover {
+      &:before {
+        background-color: fade(@color-block-link-external-hover, 90%);
+      }
+    }
+  }
+}
+
+.linkText {
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .wrap {
+    .row;
+  }
+
+  .block {
+    .column(6);
+  }
+
+  .link {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .wrap {
+    .row;
+  }
+
+  .block {
+    .column(12);
+  }
+}
+
+
+//.base {
+//  .row;
+//
+//  .block {
+//    .column(12);
+//    display: block;
+//    position: relative;
+//    height: 300px;
+//    width: 100%;
+//    margin-bottom: 16px;
+//    background-repeat: no-repeat;
+//    background-position: center center;
+//    background-size: cover;
+//    color: #fff;
+//    font-size: 20px;
+//    text-decoration: none;
+//    text-align: center;
+//  }
+//
+//  span {
+//    position: absolute;
+//    transform: translate(-50%, 0);
+//    filter: progid:DXImageTransform.Microsoft.Matrix(Dy=-2); // Same as above
+//    margin: 0 auto;
+//    line-height: 300px;
+//  }
+//
+//  .overlay {
+//    z-index: 0;
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    display: block;
+//    width: 100%;
+//    height: 100%;
+//  }
+//
+//  .internal {
+//    background: rgba(237,155,45,0.9);
+//    transition: all 0.2s ease-in;
+//  }
+//
+//  .block > .internal:hover {
+//    background: rgba(196,122,20,0.9);
+//  }
+//
+//  .external {
+//    background: rgba(178,35,88,0.9);
+//    transition: all 0.2s ease-in;
+//  }
+//
+//  .block > .external:hover {
+//    background: rgba(141,20,65,0.9);
+//  }
+//
+//  @media only screen and (max-width: 1024px) {
+//    .column(12);
+//
+//    .wrap {
+//      .row;
+//    }
+//
+//    .block {
+//      .column(6);
+//    }
+//  }
+//
+//  @media only screen and (max-width: 640px) {
+//    .block {
+//      .column(12);
+//    }
+//  }
+//}

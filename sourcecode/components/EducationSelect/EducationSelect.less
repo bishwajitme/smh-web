@@ -1,0 +1,76 @@
+@import '../../styles/common';
+
+.base {
+  position: relative;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px @color-3-hover;
+  }
+}
+
+.toggle {
+  position: relative;
+  background-color: white;
+  height: 40px;
+  padding: 12px;
+  box-sizing: border-box;
+  font-family: @font-heading;
+  font-size: 14px;
+  line-height: 1.4em;
+  color: @color-input-placeholder;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    font-family: @icon;
+    content: @icon-triangle-down;
+  }
+
+  &.open {
+    &:after {
+      content: @icon-triangle-up;
+    }
+  }
+
+  &.valid {
+    color: @color-text;
+    &:after {
+      font-size: 16px;
+      content: @icon-check;
+      color: @color-3;
+    }
+  }
+
+  &.invalid {
+    &:after {
+      font-size: 16px;
+      content: @icon-cross;
+      color: red;
+    }
+  }
+}
+
+.list {
+  &.open {
+    height: auto;
+  }
+  &.closed {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.validationMessage {
+  position: absolute;
+  display: inline-block;
+  top: 7px;
+  left: 7px;
+  font-size: 11px;
+  line-height: 15px;
+  background-color: @color-error;
+  color: white;
+  padding: 5px 10px;
+  z-index: 10;
+}

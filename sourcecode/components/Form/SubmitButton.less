@@ -1,0 +1,32 @@
+@import '../../styles/common';
+
+.input {
+  font-family: @font-heading;
+  text-align: center;
+  display: inline-block;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1em;
+  white-space: nowrap;
+  color: @color-form-submit;
+  background-color: @color-form-submit-background;
+  transition: background-color 0.4s, color 0.4s;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+  margin-bottom: 10px;
+
+  &:focus {
+    box-shadow: 0 0 0 2px @color-form-submit-background;
+    color: @color-form-submit;
+    background-color: @color-form-submit-background;
+  }
+  &:hover {
+    color: @color-form-submit-hover;
+    background-color: @color-form-submit-background-hover;
+  }
+}

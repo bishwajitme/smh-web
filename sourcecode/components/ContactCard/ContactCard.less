@@ -1,0 +1,98 @@
+@import '../../styles/common';
+
+.base {
+  position: relative;
+  background-color: @color-background;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  width: 33%;
+  height: auto;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.heading {
+  font-family: @font-heading;
+  font-weight: @weight-card-heading;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 0 5px 0;
+  font-size: 20px;
+  line-height: 1.4;
+  color: @color-heading;
+}
+
+.content {
+  position: relative;
+  width: 66%;
+  margin-left: auto;
+  height: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.title,
+.phone,
+.email {
+  display: block;
+  font-size: 14px;
+  line-height: 1.6em;
+  color: @color-text;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.faded {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: @color-background;
+  box-shadow: -10px -10px 40px 20px @color-background;
+}
+
+[data-context='listPageList'],
+[data-context='latestNewsList'],
+[data-context='articleListPage'] {
+  @media only screen and (max-width: 600px) {
+    .content {
+      height: 500px;
+      padding-top: 250px;
+      width: 100%;
+    }
+
+    .image {
+      width: 100%;
+      height: 240px;
+      bottom: auto;
+    }
+  }
+}
+
+[data-context='listPageList'],
+[data-context='educationArticleRow'],
+[data-context='interviewsRow'] {
+  .content {
+    height: 420px;
+    padding-top: 250px;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 240px;
+    bottom: auto;
+  }
+}

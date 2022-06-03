@@ -1,0 +1,57 @@
+@import '../../styles/common';
+
+//.base {
+//  .row;
+//  padding-top: 40px;
+//}
+//
+//.submenu {
+//  .column(12);
+//}
+//
+//.hero {
+//  .column(12);
+//}
+//
+//.signup {
+//  .column(12);
+//  padding-top: 60px;
+//}
+
+.base {
+  .row;
+  padding-top: 100px;
+  display: block !important;
+  margin: 0 auto !important;
+    overflow: hidden;
+}
+
+.submenu {
+  .column(3);
+  float: right;
+}
+
+.signup {
+  .column(9);
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .base {
+    padding-top: 50px;
+  }
+
+  .signup {
+    margin-top: 30px;
+  }
+
+  .submenu {
+    .column(12);
+    float: right;
+  }
+
+  .signup {
+    .column(12);
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../styles/common';
+
+.base {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: @color-background;
+    border-radius: 100%;
+    margin: 3px;
+    transition: background 0.15s ease-in;
+  }
+
+  .active {
+    background: @color-1;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .base a {
+    background: @color-1-light;
+  }
+
+  .base .active {
+    background: @color-1;
+  }
+}
